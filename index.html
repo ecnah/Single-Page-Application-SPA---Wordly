@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Wordly</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+    <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Wordly home"><span class="brand-mark">W</span> Wordly</a>
+      <div class="header-actions">
+        <button id="favorites-toggle" class="secondary-button" type="button" aria-expanded="false" aria-controls="favorites-panel">★ Saved <span id="saved-count">0</span></button>
+        <button id="theme-toggle" class="secondary-button" type="button" aria-label="Switch to dark theme">🌙 Theme</button>
+      </div>
+    </div>
+  </header>
+  <main id="home" class="container">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">YOUR PERSONAL DICTIONARY</p>
+      <h1 id="page-title">Discover the meaning of <span>every word.</span></h1>
+      <p class="intro">Search definitions, hear pronunciations, explore examples, and save words you love.</p>
+      <form id="search-form" class="search-form" role="search">
+        <label for="word-input" class="sr-only">Enter a word to search</label>
+        <input id="word-input" name="word" type="search" placeholder="Try ‘serendipity’..." autocomplete="off" required maxlength="80">
+        <button id="search-button" type="submit">Search word <span aria-hidden="true">→</span></button>
+      </form>
+      <p id="status" class="status" role="status" aria-live="polite">Enter a word above to get started.</p>
+    </section>
+    <div class="content-layout">
+      <section id="result-panel" class="result-panel" aria-label="Dictionary result" aria-live="polite">
+        <div class="empty-state"><div class="empty-icon" aria-hidden="true">📖</div><h2>Words open worlds.</h2><p>Your next discovery is just a search away.</p></div>
+      </section>
+      <aside id="favorites-panel" class="favorites-panel" aria-label="Saved words" hidden>
+        <div class="aside-heading"><h2>Saved words</h2><button id="close-favorites" type="button" class="icon-button" aria-label="Close saved words">✕</button></div>
+        <p class="aside-description">Your favorites are stored in this browser.</p>
+        <ul id="favorites-list" class="favorites-list"></ul>
+      </aside>
+    </div>
+  </main>
+  <footer class="footer container">Made for curious minds · Definitions powered by <a href="https://dictionaryapi.dev/" target="_blank" rel="noopener noreferrer">Free Dictionary API</a></footer>
+    </body>
+
+</html>
